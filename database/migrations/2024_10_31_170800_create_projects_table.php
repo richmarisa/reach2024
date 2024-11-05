@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
-            $table->string('title', length: 100);
-            $table->integer('category_id');
+            $table->string('name', length: 100);
+            $table->string('category', length: 100);
+            $table->boolean('archived')->default(false);
             $table->timestamps();
         });
     }
