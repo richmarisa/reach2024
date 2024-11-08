@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('allocation', function (Blueprint $table) {
+        Schema::create('allocations', function (Blueprint $table) {
             $table->id();
             $table->integer('project_id');
             $table->integer('resource_id');
-            $table->integer('hours');
-            $table->date('date');
-            $table->string('description', length: 255);
+            $table->integer('hours')->nullable();
+            $table->date('startdate')->nullable();
+            $table->string('description', length: 255)->nullable();
             $table->timestamps();
         });
     }

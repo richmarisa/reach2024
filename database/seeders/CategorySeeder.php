@@ -23,6 +23,7 @@ class CategorySeeder extends Seeder
         Category::insert( ['name' => 'Uncategorized' ]);
         Category::insert( ['name' => 'UX' ]);
         Category::insert( ['name' => 'WA' ]);
+        Category::insert( ['name' => 'Unknown' ]);
 
 
     }

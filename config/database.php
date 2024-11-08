@@ -62,6 +62,26 @@ return [
             ]) : [],
         ],
 
+        'production' => [
+            'driver' => 'mysql',
+            'url' => env('PROD_URL'),
+            'host' => env('PROD_HOST', '127.0.0.1'),
+            'port' => env('PROD_PORT', '3306'),
+            'database' => env('PROD_DATABASE', 'laravel'),
+            'username' => env('PROD_USERNAME', 'root'),
+            'password' => env('PROD_PASSWORD', ''),
+            'unix_socket' => env('PROD_SOCKET', ''),
+            'charset' => env('PROD_CHARSET', 'utf8mb4'),
+            'collation' => env('PROD_COLLATION', 'utf8mb4_unicode_ci'),
+            'prefix' => '',
+            'prefix_indexes' => true,
+            'strict' => true,
+            'engine' => null,
+            'options' => extension_loaded('pdo_mysql') ? array_filter([
+                PDO::MYSQL_ATTR_SSL_CA => env('MYSQL_ATTR_SSL_CA'),
+            ]) : [],
+        ],
+
         'mariadb' => [
             'driver' => 'mariadb',
             'url' => env('DB_URL'),

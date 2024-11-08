@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('resourcerole', length: 100);
             $table->string('color', length: 8);
             $table->string('textcolor', length: 8);
+            $table->boolean('archived')->default(false);
             $table->timestamps();
         });
     }
