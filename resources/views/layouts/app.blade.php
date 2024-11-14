@@ -7,7 +7,15 @@
         <title>Reach</title>
 
         <!-- Fonts -->
-
+        <style>
+        @font-face {
+            font-family: 'Jackwrite';
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            src: url('/fonts/jackwrite/Jackwrite.woff2') format('woff2'),
+            url('/fonts/jackwrite/Jackwrite.ttf') format('truetype');
+        }        </style>
         <!-- Styles / Scripts -->
         @vite('resources/css/app.css')
         @fluxStyles

@@ -3,11 +3,13 @@
 namespace App\Livewire;
 
 use Livewire\Component;
+use App\Models\Project;
 
 class ProjectList extends Component
 {
     public function render()
     {
-        return view('livewire.project-list');
+        $projects = Project::all();
+        return view('livewire.project-list', compact('projects'))->layout('layouts.app');
     }
 }
